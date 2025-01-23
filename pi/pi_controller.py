@@ -12,7 +12,7 @@ def get_direction():
     send_vel = False
     c = click.getchar()
     for event in sense.stick.get_events():
-        if event.action == "pressed":
+        if event.action in ("pressed", "held") :
     
             if event.direction == "left":
                 click.echo('Left')
